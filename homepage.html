@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/all.css">
+    <title>Stock Profit Calculator</title>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Stock Price Calculator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="aboutDevelopers.html">About Developers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class=parallax>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"
+            $carousel-indicator-height:3px;>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://m.economictimes.com/thumb/msid-79944466,width-4000,height-2250,resizemode-4,imgsize-486845/stock-market.jpg"
+                        class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block" style="box-shadow: inset;">
+                        <h3>What do you know about stock-market ?</h3>
+                        <p>A stock market, equity market, or share market is the aggregation of buyers and sellers of
+                            stocks, <br>which represent ownership claims on businesses</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://image.cnbcfm.com/api/v1/image/106841126-16135104622021-02-16t204145z_1290440652_rc2wtl9euyvu_rtrmadp_0_usa-stocks.jpeg?v=1613510538&w=678&h=381"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block" style="box-shadow: inset;">
+                        <h3>What is the Stock Market?</h3>
+                        <p>The stock market refers to the collection of markets and exchanges where regular activities
+                            of buying, selling,<br> and issuance of shares of publicly-held companies take place. </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.ramseysolutions.net/media/b2c/personalities/hogan/articles/stock-market-correction/stock-market-correction-OG.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block" style="box-shadow: inset;">
+                        <h3>Introducing stock price calculator</h3>
+                        <p>As stocks are very essesntial to study, their reliability and profitability should also be
+                            considered.<br>
+                            We provide you a feature that helps you to say whether how much profit can you earn after
+                            investing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="card" style="padding-top: 50px;">
+            <div class="card-header">
+                Enter the Stock Values for 7 days
+            </div>
+            <div class="card-body">
+                <div class="inputs">
+                    <input type="number" name="array[]" placeholder="Day 1 Price">
+                    <input type="number" name="array[]" placeholder="Day 2 Price">
+                    <input type="number" name="array[]" placeholder="Day 3 Price">
+                    <input type="number" name="array[]" placeholder="Day 4 Price">
+                    <input type="number" name="array[]" placeholder="Day 5 Price">
+                    <input type="number" name="array[]" placeholder="Day 6 Price">
+                    <input type="number" name="array[]" placeholder="Day 7 Price">
+                </div>
+                <p class="card-text" style="padding-top: 20px;" style="margin: 0 auto;">Press calculate after entering
+                    the prices</p>
+                <input type="button" value="Calculate" class="btn" id="btnCalc" onclick="btnCalculate()">
+            </div>
+        </div>
+
+        <div class="card" style="padding-top: 50px;" id="resultcard">
+            <div class="card-header">
+                The maximum profit can be earned is :
+            </div>
+            <div class="card-body">
+                <input class="text-input" type="text" id="outputp" placeholder="Profit will be shown here" readonly>
+                <div class=lead>
+                    <label id="oplabel" style="display: flex; flex-direction:row">Should Buy or Not?</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <script src="JS/homepage.js"></script>
+</body>
+
+</html>

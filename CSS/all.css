@@ -1,0 +1,91 @@
+/* .carousel-caption{
+    height:500px;
+} */
+.carousel .carousel-inner .carousel-item{
+    height:500px
+    }
+    .carousel-inner .carousel-item img{
+    min-height:200px;
+    object-fit:cover
+    }
+
+    
+    @media(max-width:768px){
+    .carousel .carousel-inner .carousel-caption{
+    height:auto
+     }
+    }
+
+    .parallax {
+        /* The image used */
+        background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/stockvault-bull-versus-bear-fi_1200x768.jpeg?300OzshJYLGjqxw.7THu55_sQ0ydPpZ3&size=770:433");
+      
+        /* Set a specific height */
+        min-height: 500px;
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    .text-input{
+        display: inline-block;
+  width: 500px;
+  min-height: 40px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 10px 10px 100px;
+  transition: all 0.1s ease-out;
+      }
+
+.btn {
+        border-radius: 0.6em;
+        margin: 0 auto;
+        padding: 1.2em 2.8em;
+        align-items: center;
+        display: block;
+        text-align: center;
+        align-self: center;
+        border-color: blue;
+        color: #fff;
+        box-shadow: 0 0 35px 35px blue inset, 0 0 0 0 blue;
+        transition: all 150ms ease-in-out ;
+    }
+    
+    .btn:hover {
+        box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+    }
+    
+    .btn:focus {
+        color: #fff;
+        outline: 0;
+    }
+    
+    .card-text .btn {
+        padding-top: 50px;
+        padding-left: 500px;
+    }
+
+    #oplabel{
+        color: rgb(255, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .card-text{
+        align-items: center;
+        text-align: center;
+    }
+
+    .text{
+        color: rgb(255, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #cards{
+        display: flex;
+        flex-direction: row !important;
+    }
+    
